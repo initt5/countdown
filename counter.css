@@ -1,0 +1,16 @@
+body {
+    background: #EDEBED url('nature.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#date-choice {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+#stop {
+    display: none;
+    transform: translate(-50%, -50%);
+}
