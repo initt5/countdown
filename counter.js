@@ -32,8 +32,23 @@
         const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        const time = new Map([['weeks', weeks], ['days', days], ['hours', hours], ['minutes', minutes], ['seconds', seconds]]);
         if (weeks >= 0 && days >= 0 && minutes >= 0 && seconds >= 0 && hours >= 0) {
-            clock.innerHTML = `${transformDate(weeks)} ${transformDate(days)} ${transformDate(hours)} ${transformDate(minutes)} ${transformDate(seconds)}`;
+            const node = document.querySelector('.time');
+            if (!node) {
+                for (let entity of time) {
+                    let timeElement = document.createElement('div');
+                    timeElement.innerHTML = `${transformDate(entity[1])}`;
+                    timeElement.className = 'time';
+                    timeElement.id = entity[0];
+                    clock.appendChild(timeElement);
+                }
+            } else {
+                for (let entity of time) {
+                let timeBit = document.querySelector(`#${entity[0]}`);
+                    timeBit.innerHTML = `${transformDate(entity[1])}`;
+                }
+            }
         }
         if (weeks == 0 && days == 0 && minutes == 0 && seconds == 0 && hours == 0) {
             localStorage.removeItem('date');

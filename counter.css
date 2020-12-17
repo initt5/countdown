@@ -6,11 +6,27 @@ body {
 }
 #date-choice {
     position: absolute;
-    left: 50%;
+    left: 48%;
     top: 60%;
     transform: translate(-50%, -50%);
 }
 #stop {
     display: none;
     transform: translate(-50%, -50%);
+}
+#clock {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 22%;
+}
+.time {
+    font-size: 80px;
+    display: inline;
+    margin-right: 80px;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.5);
+}
+.hours {
+    height: 100px;
+    width: 100px;
 }
