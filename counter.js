@@ -82,27 +82,6 @@
                     box.appendChild(timeContent);
                 }
             }
-            
-                    /*clock.appendChild(timeElement);
-                    let timeContent = document.createElement('div')
-                    timeContent.innerHTML = `${transformDate(entity[1])}`;
-                    timeContent.className = 'content animate'
-                    timeContent.style.top = '0px';
-                    timeContent.id = entity[0];
-                    timeElement.id = `${entity[0]}-box`;
-                    timeElement.appendChild(timeContent);*/
-                /*for (let entity of time) {
-                    if (oldTime.get(entity[0]) != entity[1]) {
-                        let timeBit = document.querySelector(`#${entity[0]}`);
-                        let nextTimeElement = document.createElement('div');
-                        nextTimeElement.innerHTML = `${transformDate(entity[1])}`;
-                        nextTimeElement.id = entity[0];
-                        nextTimeElement.className = `content`;
-                        nextTimeElement.style.top = '85px';
-                        animateTransition(nextTimeElement, true);
-                        document.querySelector(`#${entity[0]}-box`).append(nextTimeElement);
-                    }
-                }*/
                 oldTime = new Map(time);
 
         }
